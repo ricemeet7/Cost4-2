@@ -147,25 +147,25 @@ a {
 /*--------------------------- 
 　　　　  top_visual
 ---------------------------*/
-.top_visual {
-  /* これがなければスクロールバーが出るし、次のコンテンツにかぶるしで困る */
+#top_visual {
+  /* これがなければ下にスクロールした時に横スクロールバーが出るし、次のコンテンツにかぶるしで困る */
   overflow: hidden;
 
+  height:100vh;
 }
 
-.img_container {
+#top_visual .img_container {
   display: flex;
-  justify-content: center;
-  
+  height: 100%;
+}
+#top_visual .img_container .img{
+  flex-grow: 1;
 }
 
-.img_container img {
-  width:100%;
-  height: 100vh;
-  object-fit: cover;
-  
+#top_visual img {
+  width: 100%;
+  height: 100%;
 }
-
 /*--------------------------- 
 　　　　  information
 ---------------------------*/
@@ -271,10 +271,6 @@ a {
 #access {
   text-align: center;
   height: 100vh;
-  position: relative;
-}
-
-#access_mask {
   position: relative;
 }
 
@@ -437,6 +433,7 @@ a {
   border-top: 1px solid #fff;
   padding: 80px 30px;
   font-size: 0.75rem;
+  background-color: #000;
 }
 
 .footer .company,
@@ -487,20 +484,20 @@ a {
   /*--------------------------- 
 　　　　  top_visual
 ---------------------------*/
-  .top_visual {
-    overflow: hidden;
-    height: 100vh;
-  }
+#top_visual {
+}
 
-  #img_container {
-    width: max-content;
-    margin-left: -500px;
-  }
+#top_visual .img_container {
+  width: 300vw;
+  margin-left: -100vw;
+}
+#top_visual .img_container .img{
+  flex-grow: 1;
+}
 
-  #img_container .center {
-    width: 100vw;
-    margin-left: 47px;
-  }
+#top_visual img {
+  object-fit: cover;
+}
   /*--------------------------- 
 　　　　  information
 ---------------------------*/
@@ -559,6 +556,7 @@ a {
   /*--------------------------- 
 　　　　  access
 ---------------------------*/
+
   #access_mask img{
     height: 100%;
   }
