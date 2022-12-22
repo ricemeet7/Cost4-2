@@ -165,7 +165,7 @@ a {
 #top_visual img {
   width: 100%;
   height: 100%;
-  object-dit: cover;
+  object-fit: cover;
 }
 /*--------------------------- 
 　　　　  information
